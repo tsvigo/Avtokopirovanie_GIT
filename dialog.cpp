@@ -39,8 +39,8 @@ Dialog::Dialog(QWidget *parent)
             if (!directory.isEmpty())
                 ui->label->setText(directory);
 
-          QString  comanda_vsia="cd "+directory +
- " && git init && git add --all && git commit -m \"Описание коммита 2\" && hub create && hub push origin";
+          QString  comanda_vsia="cd \""+directory +
+ "\" && git init && git add --all && git commit -m \"Описание коммита 2\" && hub create && hub push origin";
             system (comanda_vsia.toStdString().c_str() );
 
 // отлично. Теперь можно сделать обход по всем папкам вложенным в папку
